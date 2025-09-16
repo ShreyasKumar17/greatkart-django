@@ -25,10 +25,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('store/', include('store.urls')),
     path('cart/', include('carts.urls')),
+    path('accounts/', include('accounts.urls')),
 
-    # placeholder routes
-    path('signin/', views.signin, name='signin'),
-    path('register/', views.register, name='register'),
-    path('cart/', views.cart, name='cart'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

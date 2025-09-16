@@ -8,13 +8,3 @@ def home(request):
         'products': products,
     }
     return render(request, 'home.html',context)
-
-
-def signin(request):
-    return render(request, 'placeholder.html')
-
-def register(request):
-    return render(request, 'placeholder.html')
-
-def cart(request):
-    return render(request, 'placeholder.html')
