@@ -7,7 +7,7 @@
     <div class="container">
     
     <!-- ============================ COMPONENT 1 ================================= -->
-<form action ="" method="POST">
+<form action ="{% url 'place_order' %}" method="POST">
     {% csrf_token %}
 
     <div class="row">
@@ -18,50 +18,50 @@
                 <div class="form-row">
                     <div class="col form-group">
                         <label>First name</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name = "first_name" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                     <div class="col form-group">
                         <label>Last name</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text"name = "last_name" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                 </div> <!-- form-row end.// -->
                 <div class="form-row">
                     <div class="col form-group">
                         <label>Email</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name = "email" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                     <div class="col form-group">
                         <label>Phone Number</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name="phone" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                 </div> <!-- form-row end.// -->
                 <div class="form-row">
                     <div class="col form-group">
-                        <label>Adress Line 1</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <label>Address Line 1</label>
+                        <input type="text" name ="address_line_1" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                     <div class="col form-group">
-                        <label>Adress LIne 2</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <label>Address Line 2</label>
+                        <input type="text" name = "address_line_2" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                 </div> <!-- form-row end.// -->
                 <div class="form-row">
                     <div class="col form-group">
                         <label>City</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name = "city" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                     <div class="col form-group">
                         <label>State</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name= "state" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                     <div class="col form-group">
                         <label>Country</label>
-                        <input type="text" class="form-control" placeholder="" required>
+                        <input type="text" name ="country" class="form-control" placeholder="" required>
                     </div> <!-- form-group end.// -->
                 </div> <!-- form-row end.// -->
                 <div class="form-group">
                     <label>Order Note</label>
-                    <input type="text" class="form-control" placeholder="" >
+                    <input type="text" name = "order_note" class="form-control" placeholder="" >
                     
         </aside> <!-- col.// -->
 

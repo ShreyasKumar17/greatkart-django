@@ -1,3 +1,37 @@
 {
-    "python.analysis.autoImportCompletions": true
+    "python.languageServer": "Pylance",
+
+    // Autocomplete improvements
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.useLibraryCodeForTypes": true,  // lets Pylance infer types from library code
+
+    // Type checking
+    "python.analysis.typeCheckingMode": "basic",  // can switch to "strict" if you want full type checks
+
+    // Project paths
+    "python.analysis.extraPaths": [
+        "C:/Users/shrey/OneDrive/Documents/Desktop/GreatKart"
+    ],
+
+    // Linting (optional but recommended)
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+
+    // Formatting (optional)
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+
+    // IntelliSense suggestions
+    "editor.suggestSelection": "first",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+
+    // Enable hover for docstrings and function signatures
+    "python.analysis.showFunctionSignatures": true,
+    "python.analysis.showTypeHints": true
 }
