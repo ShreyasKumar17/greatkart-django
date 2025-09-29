@@ -1,0 +1,46 @@
+/* Container for the rating stars */
+.rate {
+    display: inline-block;      /* keeps everything on one line */
+    position: relative;         /* for absolute positioning of half stars */
+    unicode-bidi: bidi-override; 
+    direction: rtl;             /* ensures stars order is correct */
+    font-size: 1.5rem;          /* adjust size as needed */
+}
+
+/* Hide the actual radio inputs */
+.rate > input {
+    display: none;
+}
+
+/* Full and half stars */
+.rate > label {
+    float: right;               /* order stars from right to left */
+    cursor: pointer;
+    position: relative;
+    color: #ddd;                /* unselected star color */
+}
+
+/* Full star */
+.rate > label:before {
+    content: "\f005";           /* FontAwesome full star */
+    font-family: FontAwesome;
+}
+
+/* Half star */
+.rate > label.half:before {
+    content: "\f089";           /* FontAwesome half star */
+    position: absolute;
+    left: 0;                    /* align with full star */
+}
+
+/* Highlight stars on hover or selection */
+.rate > input:checked ~ label:before,
+.rate > label:hover,
+.rate > label:hover ~ label {
+    color: rgb(1, 14, 21);
+}
+
+
+.rating-star i{
+    color: rgb(1, 14, 21);
+}
