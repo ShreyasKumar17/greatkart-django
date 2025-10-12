@@ -1,5 +1,6 @@
 import datetime
 import json
+from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 
@@ -122,7 +123,7 @@ def place_order(request, total =0, quantity=0):
             mt = int(datetime.date.today().strftime('%m'))
             d = datetime.date(yr,mt,dt)
             current_date = d.strftime("%Y%m%d")
-            order_number = current_date + str(data.id)
+            order_number = current_date + str(data.id) # type: ignore
             data.order_number = order_number
             data.save()
 
@@ -134,6 +135,7 @@ def place_order(request, total =0, quantity=0):
                 'tax': tax,
                 'grand_total': grand_total,
                 'order_number': order_number,
+                'paypal_client_id': settings.PAYPAL_CLIENT_ID
             }
             
             return render(request,'orders/payments.html', context)
