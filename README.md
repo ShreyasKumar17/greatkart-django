@@ -38,8 +38,8 @@ Tools	           XAMPP, VS Code, Django Admin
 
 1.Clone the repository
 
-git clone https://github.com/ShreyasKumar17/GreatKart.git
-cd GreatKart
+git clone https://github.com/ShreyasKumar17/greatkart-django.git
+cd greatkart-django
 
 2.Create virtual environment
 
