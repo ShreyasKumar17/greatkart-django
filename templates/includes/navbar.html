@@ -73,7 +73,8 @@
                         <div class="widget-header">
                             <small class="title text-muted">Welcome {{ user.first_name }}!</small>
                             <div> 
-                                <a href="dashboard">Dashboard</a> <span class="dark-transp"> | </span>
+                                {% comment %} <a href="dashboard">Dashboard</a> <span class="dark-transp"> | </span> {% endcomment %}
+                                <a href="{% url 'dashboard' %}">Dashboard</a> <span class="dark-transp"> | </span>
                                 <a href="{% url 'logout' %}"> Logout</a>
 
                         {% endif %}
